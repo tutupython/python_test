@@ -17,6 +17,7 @@ class MovieTop(object):
                 print('正在抓取第'+str(page_num)+'页数据')
                 self.start+=25
                 page_content.append(page)
+                print(page_content)
             return page_content
         except request.URLError as URLerr:
             if hasattr(URLerr,'reason'):
@@ -25,3 +26,6 @@ class MovieTop(object):
         print('begin')
         self.get_page()
         print('end')
+
+a=MovieTop()
+a.main()
