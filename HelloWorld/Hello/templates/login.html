@@ -1,14 +1,8 @@
 <!DOCTYPE html>
-{% load bootstrap_toolkit %}
-{% load url from future %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <title>数据库脚本发布系统</title>
-    <meta name="description" content="">
-    <meta name="author" content="朱显杰">
-    {% bootstrap_stylesheet_tag %}
-    {% bootstrap_stylesheet_tag "responsive" %}
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -18,7 +12,7 @@
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    {% bootstrap_javascript_tag %}
+
     {% block extra_head %}{% endblock %}
 </head>
 
@@ -34,8 +28,6 @@
         <h1>数据库脚本发布系统</h1>
         <p> </p>
         <form class="form-horizontal" action="" method="post">
-            {% csrf_token %}
-            {{ form|as_bootstrap:"horizontal" }}
             <p class="form-actions">
                 <input type="submit" value="登录" class="btn btn-primary">
                 <a href="/contactme/"><input type="button" value="忘记密码" class="btn btn-danger"></a>
